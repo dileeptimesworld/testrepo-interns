@@ -26,29 +26,29 @@ const Login = () => {
         <form onSubmit={handleSubmit}>
           <div className="input-group">
             <label>Email</label>
-            <input 
-              type="email" 
-              required 
+            <input
+              type="email"
+              required
               placeholder="Enter your email"
               value={formData.email}
-              onChange={(e) => setFormData({...formData, email: e.target.value})}
+              onChange={(e) => setFormData({ ...formData, email: e.target.value })}
             />
           </div>
           <div className="input-group">
             <label>Password</label>
-            <input 
-              type="password" 
-              required 
+            <input
+              type="password"
+              required
               placeholder="Enter your password"
               value={formData.password}
-              onChange={(e) => setFormData({...formData, password: e.target.value})}
+              onChange={(e) => setFormData({ ...formData, password: e.target.value })}
             />
           </div>
           {error && <p className="error-msg">{error}</p>}
           <button type="submit" className="primary-btn">Log In</button>
         </form>
         <p className="auth-footer">
-          Don't have an account? testing <Link to="/signup">Sign Up</Link>
+          Don't have an account?  <Link to="/signup">Sign Up</Link>
         </p>
       </div>
     </div>
